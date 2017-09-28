@@ -11,7 +11,8 @@ RUN apt-get install -y python-pip build-essential python-dev curl \
 # "Extras"
 RUN apt-get install -y libjpeg-turbo-progs
 
-RUN pip install thumbor tc_aws
+RUN pip install thumbor 
+RUN pip install tc_aws
 
 ADD thumbor.conf /conf/thumbor.conf
 ADD credentials /root/.aws/credentials
